@@ -16,21 +16,23 @@ Blueprint §48.0 requires the building agent to ask the owner four questions bef
 
 | Asset | Location |
 | --- | --- |
-| Design system: tokens and component specifications (`name: Vibrant Retail Commerce`) | `docs/design-system/DESIGN.md` |
+| Design system v2.0.0: tokens and component specifications (`name: Esk Design System`) | `docs/design-system/Esk_Design_System.md` |
 | Tayitu, primary Ethiopic font | `packages/ui/src/fonts/Tayitu.ttf` |
 | Jiret, secondary Ethiopic font | `packages/ui/src/fonts/Jiret.ttf` |
 
 Consequences under §48.0:
 
-- The DESIGN.md visual tokens supersede the §34 defaults for palette, Latin typography, spacing, radii, iconography and motion.
+- The Esk Design System visual tokens supersede the §34 defaults for palette, Latin typography, spacing, radii, iconography and motion.
 - These are not overridden: WCAG 2.1 AA contrast and focus rules (§44); Ethiopic support with Tayitu, Jiret and the Noto Sans Ethiopic fallback; Arabic numerals in Ethiopian-calendar contexts; the `<Money/>`, `<StayDate/>` and `<EthTime/>` rendering contracts; and status-colour semantics.
 
 Open conflicts for the owner. Not yet decided:
 
-1. DESIGN.md describes a retail storefront. It uses "Add to cart", "Today's Deals", "Prime" tiers and "Ask Zoe". §48.0 asks this per portal. The owner must confirm whether it applies to the platform portal, the tenant portal, the Public Portal, or a mix.
-2. The §34 status hues (hold, confirmed, in-house, checked-out, cancelled, no-show, OOO, OOS, dirty, clean, inspected) are not defined in DESIGN.md. They must be remapped to its palette, not removed. The owner must approve the mapping.
+1. The §34 status hues (hold, confirmed, in-house, checked-out, cancelled, no-show, OOO, OOS, dirty, clean, inspected) are not defined in the Esk Design System. It has success, warning, danger, info and accent only. They must be remapped to its palette, not removed. The owner must approve the mapping.
+2. The file's title and CSS prefix say "Z System" and `--z-`, while its name says Esk. The owner must confirm the token prefix.
+3. Its typography lists Plus Jakarta Sans, Inter and JetBrains Mono, with no Ethiopic family. Tayitu, Jiret and the Noto Sans Ethiopic fallback must be added to the font stacks (§34, D-36).
+4. §48.0 asks whether one system covers every portal or the Public Portal has its own brand. The Esk Design System is written as general-purpose, so one system for all portals is assumed until the owner says otherwise.
 
-Not done yet: mapping the DESIGN.md tokens to the Tailwind theme and the shadcn/ui theme variables. That is code work and waits for Questions 2 to 4.
+Not done yet: mapping the Esk Design System tokens to the Tailwind theme and the shadcn/ui theme variables. That is code work and waits for Questions 2 to 4.
 
 ### Q2. Final hostnames
 
