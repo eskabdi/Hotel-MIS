@@ -25,12 +25,13 @@ Consequences under §48.0:
 - The Esk Design System visual tokens supersede the §34 defaults for palette, Latin typography, spacing, radii, iconography and motion.
 - These are not overridden: WCAG 2.1 AA contrast and focus rules (§44); Ethiopic support with Tayitu, Jiret and the Noto Sans Ethiopic fallback; Arabic numerals in Ethiopian-calendar contexts; the `<Money/>`, `<StayDate/>` and `<EthTime/>` rendering contracts; and status-colour semantics.
 
-Open conflicts for the owner. Not yet decided:
+Owner decisions, 2026-10-25:
 
-1. The §34 status hues (hold, confirmed, in-house, checked-out, cancelled, no-show, OOO, OOS, dirty, clean, inspected) are not defined in the Esk Design System. It has success, warning, danger, info and accent only. They must be remapped to its palette, not removed. The owner must approve the mapping.
-2. The file's title and CSS prefix say "Z System" and `--z-`, while its name says Esk. The owner must confirm the token prefix.
-3. Its typography lists Plus Jakarta Sans, Inter and JetBrains Mono, with no Ethiopic family. Tayitu, Jiret and the Noto Sans Ethiopic fallback must be added to the font stacks (§34, D-36).
-4. §48.0 asks whether one system covers every portal or the Public Portal has its own brand. The Esk Design System is written as general-purpose, so one system for all portals is assumed until the owner says otherwise.
+1. **Status colours follow the Esk Design System.** The §34 status hues (hold, confirmed, in-house, checked-out, cancelled, no-show, OOO, OOS, dirty, clean, inspected) take their colours from its semantic tokens (success, warning, danger, info, accent, neutral, brand). Status is always shown with an icon or text label as well as colour (design system §2.2 rule 4). The state-to-token table is written when the status components are built.
+2. **Token prefix is `esk`.** CSS variables are `--esk-*` and Tailwind tokens use the `esk` namespace. The uploaded file still says "Z System" and `--z-` in its text. It is kept unmodified as the owner's source.
+3. **Amharic text uses Tayitu (primary) and Jiret (secondary)** from `packages/ui/src/fonts/`. The design system's own fonts (Plus Jakarta Sans, Inter, JetBrains Mono) stay for Latin text. The Noto Sans Ethiopic fallback from §34 and D-36 stays after Jiret, because the owner did not replace it.
+
+Assumption, open to correction: §48.0 asks whether one system covers every portal or the Public Portal has its own brand. The Esk Design System is written as general-purpose, so one system for all portals is assumed.
 
 Not done yet: mapping the Esk Design System tokens to the Tailwind theme and the shadcn/ui theme variables. That is code work and waits for Questions 2 to 4.
 

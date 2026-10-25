@@ -2,6 +2,10 @@
 
 Versioned record of the master blueprint and the documents imported with it. Newest entries first.
 
+## v2 — 2026-10-25 (design system decisions)
+
+- Recorded owner decisions in `0001-build-gate-0.md`: status colours follow the Esk Design System, the token prefix is `esk`, and Amharic text uses Tayitu (primary) and Jiret (secondary).
+
 ## v2 — 2026-10-25 (design system replaced)
 
 - Replaced `docs/design-system/DESIGN.md` (Vibrant Retail Commerce) with `docs/design-system/Esk_Design_System.md` (Esk Design System v2.0.0). `0001-build-gate-0.md` is updated to match.
