@@ -31,17 +31,17 @@ Owner decisions, 2026-10-25:
 2. **Token prefix is `esk`.** CSS variables are `--esk-*` and Tailwind tokens use the `esk` namespace. The uploaded file still says "Z System" and `--z-` in its text. It is kept unmodified as the owner's source.
 3. **Amharic text uses Tayitu (primary) and Jiret (secondary)** from `packages/ui/src/fonts/`. The design system's own fonts (Plus Jakarta Sans, Inter, JetBrains Mono) stay for Latin text. The Noto Sans Ethiopic fallback from §34 and D-36 stays after Jiret, because the owner did not replace it.
 
-Assumption, open to correction: §48.0 asks whether one system covers every portal or the Public Portal has its own brand. The Esk Design System is written as general-purpose, so one system for all portals is assumed.
+4. **One design system covers all portals** (platform, tenant and Public). The Public Portal has no separate consumer brand, so §48.0's per-portal question is closed.
 
 Not done yet: mapping the Esk Design System tokens to the Tailwind theme and the shadcn/ui theme variables. That is code work and waits for Questions 2 to 4.
 
 ### Q2. Final hostnames
 
-**Open.** The placeholders `platform.domain.com`, `*.domain.com`, `domain.com` and `domain-staging.com` stay in configuration until the owner provides real names or confirms the placeholders stay.
+**Open. The owner will provide the hostnames.** The placeholders `platform.domain.com`, `*.domain.com`, `domain.com` and `domain-staging.com` stay in configuration until the owner provides real names or confirms the placeholders stay.
 
 ### Q3. Supabase region (D-38) and plan tiers (D-40)
 
-**Open.**
+**Open. The owner will provide the region and plan tiers.**
 
 ### Q4. Decision gates G-1, G-4 and G-5
 

@@ -4,6 +4,8 @@ Versioned record of the master blueprint and the documents imported with it. New
 
 ## v2 — 2026-10-25 (design system decisions)
 
+- Confirmed one design system for all portals. Hostnames (Q2) and Supabase region and plan tiers (Q3) are to be provided by the owner.
+
 - Recorded owner decisions in `0001-build-gate-0.md`: status colours follow the Esk Design System, the token prefix is `esk`, and Amharic text uses Tayitu (primary) and Jiret (secondary).
 
 ## v2 — 2026-10-25 (design system replaced)
